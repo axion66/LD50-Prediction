@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/run.py", line 111, in <module>
+    t = trainer(config)
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/run.py", line 55, in __init__
+    self.dataset = Data(into_dataset(file=config['dataset']))
+TypeError: __init__() missing 1 required positional argument: 'y'

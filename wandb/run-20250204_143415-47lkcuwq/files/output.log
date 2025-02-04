@@ -1,0 +1,24 @@
+
+torch.Size([10, 9])
+Traceback (most recent call last):
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/run.py", line 117, in <module>
+    t.train()  # Train the model
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/run.py", line 62, in train
+    out = self.model(batch)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/model.py", line 141, in forward
+    x = self.conv_layers[i](x, edge_index, edge_attr)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch_geometric/nn/conv/gcn_conv.py", line 263, in forward
+    out = self.propagate(edge_index, x=x, edge_weight=edge_weight)
+  File "/var/folders/zn/sbywy2j52zg4lp3h9pxpdq540000gp/T/torch_geometric.nn.conv.gcn_conv_GCNConv_propagate_6rtdhap9.py", line 209, in propagate
+    out = self.message(
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch_geometric/nn/conv/gcn_conv.py", line 271, in message
+    return x_j if edge_weight is None else edge_weight.view(-1, 1) * x_j
+RuntimeError: The size of tensor a (96) must match the size of tensor b (32) at non-singleton dimension 0

@@ -1,0 +1,32 @@
+
+1: torch.Size([482, 9])
+Traceback (most recent call last):
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/run.py", line 111, in <module>
+    t.train()
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/run.py", line 79, in train
+    out = self.model(x)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/model.py", line 29, in forward
+    x = self.c1(x, edge_index, edge_attr)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch_geometric/nn/conv/general_conv.py", line 155, in forward
+    out = self.propagate(edge_index, x=x, size=size, edge_attr=edge_attr)
+  File "/var/folders/zn/sbywy2j52zg4lp3h9pxpdq540000gp/T/torch_geometric.nn.conv.general_conv_GeneralConv_propagate_r0ehr3iv.py", line 211, in propagate
+    out = self.message(
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch_geometric/nn/conv/general_conv.py", line 173, in message
+    x_j_out = self.message_basic(x_i, x_j, edge_attr)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch_geometric/nn/conv/general_conv.py", line 164, in message_basic
+    x_j = self.lin_msg(x_j)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch_geometric/nn/dense/linear.py", line 147, in forward
+    return F.linear(x, self.weight, self.bias)
+RuntimeError: mat1 and mat2 must have the same dtype, but got Long and Float

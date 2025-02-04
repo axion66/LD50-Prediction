@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/run.py", line 120, in <module>
+    t.train()  # Train the model
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/run.py", line 67, in train
+    out = self.model(batch)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/model.py", line 140, in forward
+    x = self.conv_layers[i](x, edge_index, edge_attr)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch_geometric/nn/conv/gcn_conv.py", line 260, in forward
+    x = self.lin(x)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch_geometric/nn/dense/linear.py", line 147, in forward
+    return F.linear(x, self.weight, self.bias)
+RuntimeError: expected m1 and m2 to have the same dtype, but got: long long != float

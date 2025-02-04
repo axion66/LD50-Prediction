@@ -1,0 +1,214 @@
+2025-02-04 14:26:25,826 INFO    StreamThr :69927 [internal.py:wandb_internal():85] W&B internal server running at pid: 69927, started at: 2025-02-04 14:26:25.816153
+2025-02-04 14:26:25,827 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: status
+2025-02-04 14:26:25,827 INFO    WriterThread:69927 [datastore.py:open_for_write():87] open: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_142625-bcvq41ms/run-bcvq41ms.wandb
+2025-02-04 14:26:25,829 DEBUG   SenderThread:69927 [sender.py:send():391] send: header
+2025-02-04 14:26:26,440 DEBUG   SenderThread:69927 [sender.py:send():391] send: run
+2025-02-04 14:26:26,648 INFO    SenderThread:69927 [dir_watcher.py:__init__():211] watching files in: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_142625-bcvq41ms/files
+2025-02-04 14:26:26,648 INFO    SenderThread:69927 [sender.py:_start_run_threads():1200] run started: bcvq41ms with start time 1738697185.816861
+2025-02-04 14:26:26,667 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: run_start
+2025-02-04 14:26:26,701 DEBUG   HandlerThread:69927 [system_info.py:__init__():26] System info init
+2025-02-04 14:26:26,701 DEBUG   HandlerThread:69927 [system_info.py:__init__():41] System info init done
+2025-02-04 14:26:26,701 INFO    HandlerThread:69927 [system_monitor.py:start():194] Starting system monitor
+2025-02-04 14:26:26,702 INFO    SystemMonitor:69927 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2025-02-04 14:26:26,702 INFO    HandlerThread:69927 [system_monitor.py:probe():214] Collecting system info
+2025-02-04 14:26:26,707 INFO    SystemMonitor:69927 [interfaces.py:start():188] Started cpu monitoring
+2025-02-04 14:26:26,708 INFO    SystemMonitor:69927 [interfaces.py:start():188] Started disk monitoring
+2025-02-04 14:26:26,711 INFO    SystemMonitor:69927 [interfaces.py:start():188] Started gpuapple monitoring
+2025-02-04 14:26:26,713 INFO    SystemMonitor:69927 [interfaces.py:start():188] Started memory monitoring
+2025-02-04 14:26:26,713 INFO    SystemMonitor:69927 [interfaces.py:start():188] Started network monitoring
+2025-02-04 14:26:28,984 ERROR   HandlerThread:69927 [gpu_apple.py:probe():176] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 164, in probe
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:26:28,998 DEBUG   HandlerThread:69927 [system_info.py:probe():152] Probing system
+2025-02-04 14:26:29,007 DEBUG   HandlerThread:69927 [system_info.py:_probe_git():137] Probing git
+2025-02-04 14:26:31,557 ERROR   gpuapple  :69927 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:26:32,074 DEBUG   HandlerThread:69927 [system_info.py:_probe_git():145] Probing git done
+2025-02-04 14:26:32,074 DEBUG   HandlerThread:69927 [system_info.py:probe():200] Probing system done
+2025-02-04 14:26:32,074 DEBUG   HandlerThread:69927 [system_monitor.py:probe():223] {'os': 'macOS-14.5-arm64-arm-64bit', 'python': '3.9.6', 'heartbeatAt': '2025-02-04T19:26:28.998850', 'startedAt': '2025-02-04T19:26:25.807740', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/Users/jinseopsong/coding/LD50-Prediction/src/run.py', 'codePathLocal': 'src/run.py', 'codePath': 'src/run.py', 'git': {'remote': 'https://github.com/axion66/LD50-Prediction.git', 'commit': None}, 'email': 'ssongjinseob@gmail.com', 'root': '/Users/jinseopsong/coding/LD50-Prediction', 'host': 'Fsa1164s-MacBook-Air.local', 'username': 'jinseopsong', 'executable': '/Library/Developer/CommandLineTools/usr/bin/python3', 'cpu_count': 8, 'cpu_count_logical': 8, 'cpu_freq': {'current': 3204, 'min': 600, 'max': 3204}, 'cpu_freq_per_core': [{'current': 3204, 'min': 600, 'max': 3204}], 'disk': {'/': {'total': 228.27386474609375, 'used': 12.41666030883789}}, 'gpuapple': {'type': 'arm', 'vendor': 'Apple'}, 'memory': {'total': 16.0}}
+2025-02-04 14:26:32,075 INFO    HandlerThread:69927 [system_monitor.py:probe():224] Finished collecting system info
+2025-02-04 14:26:32,075 INFO    HandlerThread:69927 [system_monitor.py:probe():227] Publishing system info
+2025-02-04 14:26:32,075 INFO    HandlerThread:69927 [system_monitor.py:probe():229] Finished publishing system info
+2025-02-04 14:26:32,079 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:26:32,079 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: keepalive
+2025-02-04 14:26:32,080 DEBUG   SenderThread:69927 [sender.py:send():391] send: files
+2025-02-04 14:26:32,080 INFO    SenderThread:69927 [sender.py:_save_file():1466] saving file wandb-metadata.json with policy now
+2025-02-04 14:26:32,186 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: python_packages
+2025-02-04 14:26:32,186 DEBUG   SenderThread:69927 [sender.py:send_request():418] send_request: python_packages
+2025-02-04 14:26:32,186 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: stop_status
+2025-02-04 14:26:32,186 DEBUG   SenderThread:69927 [sender.py:send_request():418] send_request: stop_status
+2025-02-04 14:26:32,188 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-04 14:26:32,306 DEBUG   SenderThread:69927 [sender.py:send():391] send: telemetry
+2025-02-04 14:26:32,385 INFO    wandb-upload_0:69927 [upload_job.py:push():130] Uploaded file /var/folders/zn/sbywy2j52zg4lp3h9pxpdq540000gp/T/tmpm8remksewandb/k1kbqk87-wandb-metadata.json
+2025-02-04 14:26:32,670 INFO    Thread-12 :69927 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_142625-bcvq41ms/files/wandb-metadata.json
+2025-02-04 14:26:32,670 INFO    Thread-12 :69927 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_142625-bcvq41ms/files/requirements.txt
+2025-02-04 14:26:33,574 ERROR   gpuapple  :69927 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:26:34,660 DEBUG   SenderThread:69927 [sender.py:send():391] send: exit
+2025-02-04 14:26:34,660 INFO    SenderThread:69927 [sender.py:send_exit():598] handling exit code: 1
+2025-02-04 14:26:34,660 INFO    SenderThread:69927 [sender.py:send_exit():600] handling runtime: 7
+2025-02-04 14:26:34,661 INFO    SenderThread:69927 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:26:34,661 INFO    SenderThread:69927 [sender.py:send_exit():606] send defer
+2025-02-04 14:26:34,661 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: defer
+2025-02-04 14:26:34,661 INFO    HandlerThread:69927 [handler.py:handle_request_defer():184] handle defer: 0
+2025-02-04 14:26:34,661 DEBUG   SenderThread:69927 [sender.py:send_request():418] send_request: defer
+2025-02-04 14:26:34,661 INFO    SenderThread:69927 [sender.py:send_request_defer():622] handle sender defer: 0
+2025-02-04 14:26:34,661 INFO    SenderThread:69927 [sender.py:transition_state():626] send defer: 1
+2025-02-04 14:26:34,661 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: defer
+2025-02-04 14:26:34,661 INFO    HandlerThread:69927 [handler.py:handle_request_defer():184] handle defer: 1
+2025-02-04 14:26:34,661 DEBUG   SenderThread:69927 [sender.py:send_request():418] send_request: defer
+2025-02-04 14:26:34,662 INFO    SenderThread:69927 [sender.py:send_request_defer():622] handle sender defer: 1
+2025-02-04 14:26:34,662 INFO    SenderThread:69927 [sender.py:transition_state():626] send defer: 2
+2025-02-04 14:26:34,662 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: defer
+2025-02-04 14:26:34,662 INFO    HandlerThread:69927 [handler.py:handle_request_defer():184] handle defer: 2
+2025-02-04 14:26:34,662 INFO    HandlerThread:69927 [system_monitor.py:finish():203] Stopping system monitor
+2025-02-04 14:26:34,662 INFO    HandlerThread:69927 [interfaces.py:finish():200] Joined cpu monitor
+2025-02-04 14:26:34,662 DEBUG   SystemMonitor:69927 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2025-02-04 14:26:34,662 INFO    HandlerThread:69927 [interfaces.py:finish():200] Joined disk monitor
+2025-02-04 14:26:34,662 DEBUG   SystemMonitor:69927 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2025-02-04 14:26:34,662 DEBUG   SystemMonitor:69927 [system_monitor.py:_start():183] Publishing last batch of metrics
+2025-02-04 14:26:34,662 INFO    HandlerThread:69927 [interfaces.py:finish():200] Joined gpuapple monitor
+2025-02-04 14:26:34,662 INFO    HandlerThread:69927 [interfaces.py:finish():200] Joined memory monitor
+2025-02-04 14:26:34,662 INFO    HandlerThread:69927 [interfaces.py:finish():200] Joined network monitor
+2025-02-04 14:26:34,663 DEBUG   SenderThread:69927 [sender.py:send_request():418] send_request: defer
+2025-02-04 14:26:34,663 INFO    SenderThread:69927 [sender.py:send_request_defer():622] handle sender defer: 2
+2025-02-04 14:26:34,663 INFO    SenderThread:69927 [sender.py:transition_state():626] send defer: 3
+2025-02-04 14:26:34,663 DEBUG   SenderThread:69927 [sender.py:send():391] send: telemetry
+2025-02-04 14:26:34,663 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: defer
+2025-02-04 14:26:34,663 INFO    HandlerThread:69927 [handler.py:handle_request_defer():184] handle defer: 3
+2025-02-04 14:26:34,663 DEBUG   SenderThread:69927 [sender.py:send():391] send: stats
+2025-02-04 14:26:34,663 DEBUG   SenderThread:69927 [sender.py:send_request():418] send_request: defer
+2025-02-04 14:26:34,663 INFO    SenderThread:69927 [sender.py:send_request_defer():622] handle sender defer: 3
+2025-02-04 14:26:34,663 INFO    SenderThread:69927 [sender.py:transition_state():626] send defer: 4
+2025-02-04 14:26:34,663 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: defer
+2025-02-04 14:26:34,663 INFO    HandlerThread:69927 [handler.py:handle_request_defer():184] handle defer: 4
+2025-02-04 14:26:34,663 DEBUG   SenderThread:69927 [sender.py:send_request():418] send_request: defer
+2025-02-04 14:26:34,663 INFO    SenderThread:69927 [sender.py:send_request_defer():622] handle sender defer: 4
+2025-02-04 14:26:34,663 INFO    SenderThread:69927 [sender.py:transition_state():626] send defer: 5
+2025-02-04 14:26:34,664 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: defer
+2025-02-04 14:26:34,664 INFO    HandlerThread:69927 [handler.py:handle_request_defer():184] handle defer: 5
+2025-02-04 14:26:34,664 DEBUG   SenderThread:69927 [sender.py:send():391] send: summary
+2025-02-04 14:26:34,664 INFO    SenderThread:69927 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:26:34,664 DEBUG   SenderThread:69927 [sender.py:send_request():418] send_request: defer
+2025-02-04 14:26:34,664 INFO    SenderThread:69927 [sender.py:send_request_defer():622] handle sender defer: 5
+2025-02-04 14:26:34,664 INFO    SenderThread:69927 [sender.py:transition_state():626] send defer: 6
+2025-02-04 14:26:34,664 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: defer
+2025-02-04 14:26:34,664 INFO    HandlerThread:69927 [handler.py:handle_request_defer():184] handle defer: 6
+2025-02-04 14:26:34,664 DEBUG   SenderThread:69927 [sender.py:send_request():418] send_request: defer
+2025-02-04 14:26:34,664 INFO    SenderThread:69927 [sender.py:send_request_defer():622] handle sender defer: 6
+2025-02-04 14:26:34,667 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:26:34,679 INFO    Thread-12 :69927 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_142625-bcvq41ms/files/wandb-summary.json
+2025-02-04 14:26:34,679 INFO    Thread-12 :69927 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_142625-bcvq41ms/files/output.log
+2025-02-04 14:26:34,726 INFO    SenderThread:69927 [sender.py:transition_state():626] send defer: 7
+2025-02-04 14:26:34,726 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: defer
+2025-02-04 14:26:34,726 INFO    HandlerThread:69927 [handler.py:handle_request_defer():184] handle defer: 7
+2025-02-04 14:26:34,726 DEBUG   SenderThread:69927 [sender.py:send_request():418] send_request: defer
+2025-02-04 14:26:34,726 INFO    SenderThread:69927 [sender.py:send_request_defer():622] handle sender defer: 7
+2025-02-04 14:26:35,666 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: poll_exit
+2025-02-04 14:26:35,685 INFO    Thread-12 :69927 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_142625-bcvq41ms/files/config.yaml
+2025-02-04 14:26:36,674 INFO    SenderThread:69927 [sender.py:transition_state():626] send defer: 8
+2025-02-04 14:26:36,675 DEBUG   SenderThread:69927 [sender.py:send_request():418] send_request: poll_exit
+2025-02-04 14:26:36,675 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: defer
+2025-02-04 14:26:36,675 INFO    HandlerThread:69927 [handler.py:handle_request_defer():184] handle defer: 8
+2025-02-04 14:26:36,676 DEBUG   SenderThread:69927 [sender.py:send_request():418] send_request: defer
+2025-02-04 14:26:36,676 INFO    SenderThread:69927 [sender.py:send_request_defer():622] handle sender defer: 8
+2025-02-04 14:26:36,676 INFO    SenderThread:69927 [job_builder.py:build():443] Attempting to build job artifact
+2025-02-04 14:26:36,677 INFO    SenderThread:69927 [job_builder.py:_get_source_type():583] no source found
+2025-02-04 14:26:36,677 INFO    SenderThread:69927 [sender.py:transition_state():626] send defer: 9
+2025-02-04 14:26:36,677 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: defer
+2025-02-04 14:26:36,677 INFO    HandlerThread:69927 [handler.py:handle_request_defer():184] handle defer: 9
+2025-02-04 14:26:36,677 DEBUG   SenderThread:69927 [sender.py:send_request():418] send_request: defer
+2025-02-04 14:26:36,677 INFO    SenderThread:69927 [sender.py:send_request_defer():622] handle sender defer: 9
+2025-02-04 14:26:36,677 INFO    SenderThread:69927 [dir_watcher.py:finish():358] shutting down directory watcher
+2025-02-04 14:26:36,686 INFO    SenderThread:69927 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_142625-bcvq41ms/files/output.log
+2025-02-04 14:26:36,687 INFO    SenderThread:69927 [dir_watcher.py:finish():388] scan: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_142625-bcvq41ms/files
+2025-02-04 14:26:36,687 INFO    SenderThread:69927 [dir_watcher.py:finish():402] scan save: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_142625-bcvq41ms/files/requirements.txt requirements.txt
+2025-02-04 14:26:36,687 INFO    SenderThread:69927 [dir_watcher.py:finish():402] scan save: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_142625-bcvq41ms/files/output.log output.log
+2025-02-04 14:26:36,690 INFO    SenderThread:69927 [dir_watcher.py:finish():402] scan save: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_142625-bcvq41ms/files/config.yaml config.yaml
+2025-02-04 14:26:36,690 INFO    SenderThread:69927 [dir_watcher.py:finish():402] scan save: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_142625-bcvq41ms/files/wandb-summary.json wandb-summary.json
+2025-02-04 14:26:36,693 INFO    SenderThread:69927 [dir_watcher.py:finish():402] scan save: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_142625-bcvq41ms/files/wandb-metadata.json wandb-metadata.json
+2025-02-04 14:26:36,694 INFO    SenderThread:69927 [sender.py:transition_state():626] send defer: 10
+2025-02-04 14:26:36,696 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: defer
+2025-02-04 14:26:36,698 INFO    HandlerThread:69927 [handler.py:handle_request_defer():184] handle defer: 10
+2025-02-04 14:26:36,699 DEBUG   SenderThread:69927 [sender.py:send_request():418] send_request: defer
+2025-02-04 14:26:36,699 INFO    SenderThread:69927 [sender.py:send_request_defer():622] handle sender defer: 10
+2025-02-04 14:26:36,699 INFO    SenderThread:69927 [file_pusher.py:finish():169] shutting down file pusher
+2025-02-04 14:26:36,916 INFO    wandb-upload_0:69927 [upload_job.py:push():130] Uploaded file /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_142625-bcvq41ms/files/requirements.txt
+2025-02-04 14:26:37,023 INFO    wandb-upload_2:69927 [upload_job.py:push():130] Uploaded file /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_142625-bcvq41ms/files/config.yaml
+2025-02-04 14:26:37,047 INFO    wandb-upload_3:69927 [upload_job.py:push():130] Uploaded file /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_142625-bcvq41ms/files/wandb-summary.json
+2025-02-04 14:26:37,048 INFO    wandb-upload_1:69927 [upload_job.py:push():130] Uploaded file /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_142625-bcvq41ms/files/output.log
+2025-02-04 14:26:37,254 INFO    Thread-11 :69927 [sender.py:transition_state():626] send defer: 11
+2025-02-04 14:26:37,254 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: defer
+2025-02-04 14:26:37,255 INFO    HandlerThread:69927 [handler.py:handle_request_defer():184] handle defer: 11
+2025-02-04 14:26:37,255 DEBUG   SenderThread:69927 [sender.py:send_request():418] send_request: defer
+2025-02-04 14:26:37,255 INFO    SenderThread:69927 [sender.py:send_request_defer():622] handle sender defer: 11
+2025-02-04 14:26:37,256 INFO    SenderThread:69927 [file_pusher.py:join():175] waiting for file pusher
+2025-02-04 14:26:37,256 INFO    SenderThread:69927 [sender.py:transition_state():626] send defer: 12
+2025-02-04 14:26:37,257 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: defer
+2025-02-04 14:26:37,257 INFO    HandlerThread:69927 [handler.py:handle_request_defer():184] handle defer: 12
+2025-02-04 14:26:37,257 DEBUG   SenderThread:69927 [sender.py:send_request():418] send_request: defer
+2025-02-04 14:26:37,257 INFO    SenderThread:69927 [sender.py:send_request_defer():622] handle sender defer: 12
+2025-02-04 14:26:37,257 INFO    SenderThread:69927 [file_stream.py:finish():601] file stream finish called
+2025-02-04 14:26:37,326 INFO    SenderThread:69927 [file_stream.py:finish():605] file stream finish is done
+2025-02-04 14:26:37,326 INFO    SenderThread:69927 [sender.py:transition_state():626] send defer: 13
+2025-02-04 14:26:37,327 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: defer
+2025-02-04 14:26:37,327 INFO    HandlerThread:69927 [handler.py:handle_request_defer():184] handle defer: 13
+2025-02-04 14:26:37,327 DEBUG   SenderThread:69927 [sender.py:send_request():418] send_request: defer
+2025-02-04 14:26:37,327 INFO    SenderThread:69927 [sender.py:send_request_defer():622] handle sender defer: 13
+2025-02-04 14:26:37,328 INFO    SenderThread:69927 [sender.py:transition_state():626] send defer: 14
+2025-02-04 14:26:37,328 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: defer
+2025-02-04 14:26:37,328 DEBUG   SenderThread:69927 [sender.py:send():391] send: final
+2025-02-04 14:26:37,328 INFO    HandlerThread:69927 [handler.py:handle_request_defer():184] handle defer: 14
+2025-02-04 14:26:37,328 DEBUG   SenderThread:69927 [sender.py:send():391] send: footer
+2025-02-04 14:26:37,329 DEBUG   SenderThread:69927 [sender.py:send_request():418] send_request: defer
+2025-02-04 14:26:37,329 INFO    SenderThread:69927 [sender.py:send_request_defer():622] handle sender defer: 14
+2025-02-04 14:26:37,330 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: poll_exit
+2025-02-04 14:26:37,330 DEBUG   SenderThread:69927 [sender.py:send_request():418] send_request: poll_exit
+2025-02-04 14:26:37,331 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: server_info
+2025-02-04 14:26:37,331 DEBUG   SenderThread:69927 [sender.py:send_request():418] send_request: server_info
+2025-02-04 14:26:37,335 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: poll_exit
+2025-02-04 14:26:37,335 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: get_summary
+2025-02-04 14:26:37,336 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: sampled_history
+2025-02-04 14:26:37,336 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-04 14:26:37,381 DEBUG   SenderThread:69927 [sender.py:send_request():418] send_request: poll_exit
+2025-02-04 14:26:37,382 INFO    MainThread:69927 [wandb_run.py:_footer_history_summary_info():4078] rendering history
+2025-02-04 14:26:37,382 INFO    MainThread:69927 [wandb_run.py:_footer_history_summary_info():4110] rendering summary
+2025-02-04 14:26:37,382 INFO    MainThread:69927 [wandb_run.py:_footer_sync_info():4037] logging synced files
+2025-02-04 14:26:37,383 DEBUG   HandlerThread:69927 [handler.py:handle_request():158] handle_request: shutdown
+2025-02-04 14:26:37,383 INFO    HandlerThread:69927 [handler.py:finish():884] shutting down handler
+2025-02-04 14:26:38,340 INFO    WriterThread:69927 [datastore.py:close():296] close: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_142625-bcvq41ms/run-bcvq41ms.wandb
+2025-02-04 14:26:38,387 INFO    SenderThread:69927 [sender.py:finish():1631] shutting down sender
+2025-02-04 14:26:38,387 INFO    SenderThread:69927 [file_pusher.py:finish():169] shutting down file pusher
+2025-02-04 14:26:38,387 INFO    SenderThread:69927 [file_pusher.py:join():175] waiting for file pusher

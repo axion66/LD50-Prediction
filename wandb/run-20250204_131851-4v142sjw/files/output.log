@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/run.py", line 91, in <module>
+    t.train()
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/run.py", line 52, in train
+    x, edge_index, edge_attr, batch_ids = batch.x, batch.edge_index, batch.edge_attr, batch.batch
+AttributeError: 'list' object has no attribute 'x'

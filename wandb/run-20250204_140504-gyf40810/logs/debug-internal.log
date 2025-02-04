@@ -1,0 +1,1526 @@
+2025-02-04 14:05:04,655 INFO    StreamThr :69254 [internal.py:wandb_internal():85] W&B internal server running at pid: 69254, started at: 2025-02-04 14:05:04.652982
+2025-02-04 14:05:04,658 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status
+2025-02-04 14:05:04,660 INFO    WriterThread:69254 [datastore.py:open_for_write():87] open: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/run-gyf40810.wandb
+2025-02-04 14:05:04,661 DEBUG   SenderThread:69254 [sender.py:send():391] send: header
+2025-02-04 14:05:04,753 DEBUG   SenderThread:69254 [sender.py:send():391] send: run
+2025-02-04 14:05:04,950 INFO    SenderThread:69254 [dir_watcher.py:__init__():211] watching files in: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files
+2025-02-04 14:05:04,951 INFO    SenderThread:69254 [sender.py:_start_run_threads():1200] run started: gyf40810 with start time 1738695904.653267
+2025-02-04 14:05:04,963 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: run_start
+2025-02-04 14:05:04,989 DEBUG   HandlerThread:69254 [system_info.py:__init__():26] System info init
+2025-02-04 14:05:04,989 DEBUG   HandlerThread:69254 [system_info.py:__init__():41] System info init done
+2025-02-04 14:05:04,989 INFO    HandlerThread:69254 [system_monitor.py:start():194] Starting system monitor
+2025-02-04 14:05:04,989 INFO    SystemMonitor:69254 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2025-02-04 14:05:04,990 INFO    HandlerThread:69254 [system_monitor.py:probe():214] Collecting system info
+2025-02-04 14:05:04,991 INFO    SystemMonitor:69254 [interfaces.py:start():188] Started cpu monitoring
+2025-02-04 14:05:04,994 INFO    SystemMonitor:69254 [interfaces.py:start():188] Started disk monitoring
+2025-02-04 14:05:04,996 INFO    SystemMonitor:69254 [interfaces.py:start():188] Started gpuapple monitoring
+2025-02-04 14:05:04,997 INFO    SystemMonitor:69254 [interfaces.py:start():188] Started memory monitoring
+2025-02-04 14:05:04,997 INFO    SystemMonitor:69254 [interfaces.py:start():188] Started network monitoring
+2025-02-04 14:05:05,096 ERROR   HandlerThread:69254 [gpu_apple.py:probe():176] GPU stats error: Command '['/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 164, in probe
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2025-02-04 14:05:05,100 DEBUG   HandlerThread:69254 [system_info.py:probe():152] Probing system
+2025-02-04 14:05:05,117 DEBUG   HandlerThread:69254 [system_info.py:_probe_git():137] Probing git
+2025-02-04 14:05:05,168 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2025-02-04 14:05:05,318 DEBUG   HandlerThread:69254 [system_info.py:_probe_git():145] Probing git done
+2025-02-04 14:05:05,318 DEBUG   HandlerThread:69254 [system_info.py:probe():200] Probing system done
+2025-02-04 14:05:05,318 DEBUG   HandlerThread:69254 [system_monitor.py:probe():223] {'os': 'macOS-14.5-arm64-arm-64bit', 'python': '3.9.6', 'heartbeatAt': '2025-02-04T19:05:05.100216', 'startedAt': '2025-02-04T19:05:04.645980', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/Users/jinseopsong/coding/LD50-Prediction/src/run.py', 'codePathLocal': 'src/run.py', 'codePath': 'src/run.py', 'git': {'remote': 'https://github.com/axion66/LD50-Prediction.git', 'commit': '8917adda0bdfe4021e9e3c7b7048979a0dac9eba'}, 'email': 'ssongjinseob@gmail.com', 'root': '/Users/jinseopsong/coding/LD50-Prediction', 'host': 'Fsa1164s-MacBook-Air.local', 'username': 'jinseopsong', 'executable': '/Library/Developer/CommandLineTools/usr/bin/python3', 'cpu_count': 8, 'cpu_count_logical': 8, 'cpu_freq': {'current': 3204, 'min': 600, 'max': 3204}, 'cpu_freq_per_core': [{'current': 3204, 'min': 600, 'max': 3204}], 'disk': {'/': {'total': 228.27386474609375, 'used': 12.41666030883789}}, 'gpuapple': {'type': 'arm', 'vendor': 'Apple'}, 'memory': {'total': 16.0}}
+2025-02-04 14:05:05,318 INFO    HandlerThread:69254 [system_monitor.py:probe():224] Finished collecting system info
+2025-02-04 14:05:05,318 INFO    HandlerThread:69254 [system_monitor.py:probe():227] Publishing system info
+2025-02-04 14:05:05,319 INFO    HandlerThread:69254 [system_monitor.py:probe():229] Finished publishing system info
+2025-02-04 14:05:05,320 DEBUG   SenderThread:69254 [sender.py:send():391] send: files
+2025-02-04 14:05:05,321 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-metadata.json with policy now
+2025-02-04 14:05:05,403 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: python_packages
+2025-02-04 14:05:05,403 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: python_packages
+2025-02-04 14:05:05,404 DEBUG   SenderThread:69254 [sender.py:send():391] send: telemetry
+2025-02-04 14:05:05,405 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: stop_status
+2025-02-04 14:05:05,406 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: stop_status
+2025-02-04 14:05:05,415 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-04 14:05:05,604 INFO    wandb-upload_0:69254 [upload_job.py:push():130] Uploaded file /var/folders/zn/sbywy2j52zg4lp3h9pxpdq540000gp/T/tmpvqrjm17nwandb/8zlh45o6-wandb-metadata.json
+2025-02-04 14:05:05,956 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/requirements.txt
+2025-02-04 14:05:05,956 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-metadata.json
+2025-02-04 14:05:08,062 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:05:10,074 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:05:10,395 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:05:10,396 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:05:10,396 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:05:10,397 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:05:10,397 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:05:10,979 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:05:10,980 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:05:12,085 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:05:12,989 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:05:13,171 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:05:13,172 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:05:13,173 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:05:13,173 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:05:13,994 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:05:14,107 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:05:15,000 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:05:15,409 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-04 14:05:15,410 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:05:15,880 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:05:15,881 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:05:15,881 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:05:15,882 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:05:16,005 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:05:16,119 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:05:17,010 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:05:18,130 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:05:18,591 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:05:18,592 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:05:18,592 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:05:18,594 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:05:19,017 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:05:20,142 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:05:20,409 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: stop_status
+2025-02-04 14:05:20,409 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: stop_status
+2025-02-04 14:05:20,508 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:05:21,028 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:05:21,284 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:05:21,285 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:05:21,285 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:05:21,286 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:05:22,033 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:05:22,152 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:05:23,038 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:05:23,826 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:05:23,827 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:05:23,827 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:05:23,829 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:05:24,039 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:05:24,163 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:05:25,043 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:05:25,412 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-04 14:05:26,175 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:05:26,422 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:05:26,705 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:05:26,706 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:05:26,706 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:05:26,707 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:05:27,048 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:05:28,186 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:05:29,056 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:05:29,797 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:05:29,797 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:05:29,798 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:05:29,798 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:05:30,061 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:05:30,198 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:05:31,066 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:05:31,428 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:05:32,207 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:05:32,813 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:05:32,814 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:05:32,814 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:05:32,816 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:05:33,072 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:05:34,236 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:05:35,082 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:05:35,415 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: stop_status
+2025-02-04 14:05:35,415 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: stop_status
+2025-02-04 14:05:35,418 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-04 14:05:35,965 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:05:35,966 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:05:35,966 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:05:35,968 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:05:36,083 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:05:36,247 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:05:36,977 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:05:37,088 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:05:38,093 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/config.yaml
+2025-02-04 14:05:38,259 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:05:38,896 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:05:38,897 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:05:38,897 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:05:38,897 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:05:39,099 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:05:40,271 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:05:41,109 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:05:41,831 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:05:41,832 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:05:41,833 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:05:41,833 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:05:42,115 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:05:42,283 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:05:42,837 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:05:43,120 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:05:44,294 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:05:44,802 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:05:44,803 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:05:44,803 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:05:44,805 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:05:45,127 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:05:45,422 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-04 14:05:46,305 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:05:47,138 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:05:47,391 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:05:47,392 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:05:47,393 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:05:47,394 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:05:48,143 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:05:48,316 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:05:48,400 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:05:49,149 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:05:50,140 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:05:50,140 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:05:50,140 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:05:50,142 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:05:50,150 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:05:50,328 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:05:50,416 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: stop_status
+2025-02-04 14:05:50,416 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: stop_status
+2025-02-04 14:05:51,151 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:05:52,339 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:05:52,836 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:05:52,837 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:05:52,837 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:05:52,837 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:05:53,161 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:05:53,843 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:05:54,350 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:05:55,172 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:05:55,426 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-04 14:05:55,498 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:05:55,499 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:05:55,499 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:05:55,499 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:05:56,177 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:05:56,361 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:05:57,182 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:05:58,284 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:05:58,285 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:05:58,285 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:05:58,285 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:05:58,372 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:05:59,193 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:05:59,193 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:05:59,291 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:06:00,383 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:06:00,811 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:06:00,812 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:06:00,812 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:06:00,813 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:06:01,203 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:06:02,394 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:06:03,211 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:06:03,255 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:06:03,256 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:06:03,256 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:06:03,257 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:06:04,217 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:06:04,405 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:06:05,003 DEBUG   SystemMonitor:69254 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2025-02-04 14:06:05,004 DEBUG   SenderThread:69254 [sender.py:send():391] send: telemetry
+2025-02-04 14:06:05,004 DEBUG   SenderThread:69254 [sender.py:send():391] send: stats
+2025-02-04 14:06:05,004 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:06:05,222 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:06:05,421 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: stop_status
+2025-02-04 14:06:05,421 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: stop_status
+2025-02-04 14:06:05,428 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-04 14:06:05,731 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:06:05,732 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:06:05,732 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:06:05,733 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:06:06,227 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:06:06,416 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:06:07,233 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:06:08,344 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:06:08,345 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:06:08,345 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:06:08,345 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:06:08,428 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:06:09,243 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:06:09,244 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:06:10,358 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:06:10,439 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:06:11,019 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:06:11,020 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:06:11,020 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:06:11,021 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:06:11,254 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/config.yaml
+2025-02-04 14:06:11,254 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:06:12,451 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:06:13,265 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:06:13,703 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:06:13,704 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:06:13,704 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:06:13,706 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:06:14,270 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:06:14,464 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:06:15,275 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:06:15,433 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-04 14:06:15,465 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:06:16,476 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:06:16,593 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:06:16,594 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:06:16,594 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:06:16,594 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:06:17,282 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:06:18,485 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:06:19,291 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:06:19,373 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:06:19,375 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:06:19,375 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:06:19,376 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:06:20,295 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:06:20,426 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: stop_status
+2025-02-04 14:06:20,427 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: stop_status
+2025-02-04 14:06:20,497 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:06:20,534 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:06:21,300 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:06:22,324 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:06:22,324 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:06:22,325 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:06:22,325 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:06:22,508 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:06:23,311 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:06:24,519 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:06:24,912 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:06:24,913 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:06:24,913 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:06:24,913 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:06:25,318 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:06:25,318 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:06:25,437 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-04 14:06:26,479 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:06:26,528 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:06:27,329 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:06:27,933 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:06:27,934 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:06:27,934 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:06:27,935 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:06:28,334 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:06:28,540 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:06:29,340 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:06:30,551 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:06:30,678 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:06:30,679 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:06:30,680 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:06:30,680 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:06:31,346 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:06:31,685 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:06:32,560 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:06:33,353 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:06:33,535 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:06:33,536 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:06:33,536 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:06:33,537 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:06:34,356 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:06:34,571 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:06:35,009 DEBUG   SenderThread:69254 [sender.py:send():391] send: stats
+2025-02-04 14:06:35,362 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:06:35,431 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: stop_status
+2025-02-04 14:06:35,431 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: stop_status
+2025-02-04 14:06:35,442 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-04 14:06:36,386 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:06:36,387 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:06:36,387 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:06:36,387 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:06:36,582 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:06:37,371 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:06:37,393 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:06:38,591 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:06:39,031 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:06:39,032 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:06:39,033 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:06:39,034 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:06:39,382 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:06:39,382 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:06:40,601 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:06:41,389 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:06:41,751 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:06:41,752 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:06:41,752 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:06:41,752 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:06:42,392 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:06:42,611 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:06:42,757 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:06:43,397 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:06:44,599 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:06:44,600 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:06:44,600 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:06:44,602 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:06:44,618 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:06:45,405 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:06:45,447 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-04 14:06:46,627 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:06:47,414 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:06:47,524 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:06:47,525 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:06:47,525 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:06:47,525 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:06:48,419 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:06:48,527 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:06:48,639 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:06:49,421 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:06:50,188 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:06:50,189 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:06:50,189 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:06:50,190 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:06:50,426 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:06:50,436 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: stop_status
+2025-02-04 14:06:50,436 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: stop_status
+2025-02-04 14:06:50,650 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:06:51,431 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:06:52,661 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:06:52,724 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:06:52,725 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:06:52,725 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:06:52,726 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:06:53,441 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:06:53,730 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:06:54,670 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:06:55,451 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:06:55,452 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-04 14:06:55,643 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:06:55,644 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:06:55,644 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:06:55,645 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:06:56,456 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:06:56,678 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:06:57,462 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:06:58,476 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:06:58,476 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:06:58,477 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:06:58,477 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:06:58,690 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:06:59,471 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:06:59,483 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:07:00,697 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:07:01,203 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:07:01,204 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:07:01,205 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:07:01,205 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:07:01,481 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:07:01,481 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:07:02,708 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:07:03,491 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:07:03,915 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:07:03,916 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:07:03,916 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:07:03,917 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:07:04,497 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:07:04,719 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:07:04,922 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:07:05,015 DEBUG   SenderThread:69254 [sender.py:send():391] send: stats
+2025-02-04 14:07:05,441 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: stop_status
+2025-02-04 14:07:05,441 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: stop_status
+2025-02-04 14:07:05,455 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-04 14:07:05,501 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:07:06,601 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:07:06,602 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:07:06,602 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:07:06,602 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:07:06,727 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:07:07,508 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:07:08,739 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:07:09,338 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:07:09,339 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:07:09,340 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:07:09,340 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:07:09,517 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:07:09,517 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:07:10,346 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:07:10,751 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:07:11,525 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:07:11,962 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:07:11,963 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:07:11,963 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:07:11,964 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:07:12,529 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:07:12,762 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:07:13,535 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:07:14,475 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:07:14,476 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:07:14,476 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:07:14,477 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:07:14,538 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:07:14,772 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:07:15,459 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-04 14:07:15,482 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:07:15,544 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:07:16,784 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:07:16,943 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:07:16,944 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:07:16,944 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:07:16,944 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:07:17,554 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:07:18,795 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:07:19,331 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:07:19,332 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:07:19,333 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:07:19,333 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:07:19,564 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:07:19,564 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:07:20,446 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: stop_status
+2025-02-04 14:07:20,447 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: stop_status
+2025-02-04 14:07:20,538 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:07:20,806 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:07:21,572 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:07:22,173 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:07:22,174 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:07:22,174 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:07:22,175 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:07:22,577 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:07:22,818 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:07:23,582 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:07:24,829 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:07:25,123 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:07:25,124 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:07:25,124 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:07:25,126 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:07:25,463 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-04 14:17:17,160 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:17:17,165 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: stop_status
+2025-02-04 14:17:17,205 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-04 14:17:17,257 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: stop_status
+2025-02-04 14:17:17,259 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:17:18,134 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:17:18,470 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:17:19,332 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:17:20,631 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:17:20,840 DEBUG   SenderThread:69254 [sender.py:send():391] send: stats
+2025-02-04 14:17:20,841 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:17:20,841 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:17:20,841 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:17:21,143 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:17:21,183 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:17:21,183 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:17:21,184 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:17:21,184 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:17:22,146 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:17:22,147 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:17:22,641 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:17:23,017 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:17:23,523 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:17:23,524 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:17:23,524 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:17:23,524 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:17:24,157 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:17:24,157 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:17:24,651 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:17:25,967 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:17:25,968 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:17:25,968 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:17:25,968 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:17:26,168 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:17:26,168 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:17:26,672 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:17:26,954 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-04 14:17:28,018 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:17:28,178 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:17:28,685 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:17:28,896 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:17:28,897 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:17:28,897 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:17:28,898 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:17:29,181 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:17:30,183 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:17:30,695 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:17:31,455 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:17:31,456 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:17:31,456 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:17:31,457 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:17:32,007 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: stop_status
+2025-02-04 14:17:32,007 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: stop_status
+2025-02-04 14:17:32,194 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:17:32,706 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:17:33,121 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:17:33,843 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:17:33,844 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:17:33,845 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:17:33,845 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:17:34,201 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:17:34,202 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:17:34,717 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:17:36,212 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:17:36,499 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: partial_history
+2025-02-04 14:17:36,501 DEBUG   SenderThread:69254 [sender.py:send():391] send: history
+2025-02-04 14:17:36,501 DEBUG   SenderThread:69254 [sender.py:send_request():418] send_request: summary_record
+2025-02-04 14:17:36,501 INFO    SenderThread:69254 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2025-02-04 14:17:36,728 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:17:36,959 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-04 14:17:37,215 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/wandb-summary.json
+2025-02-04 14:17:38,216 INFO    Thread-12 :69254 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/jinseopsong/coding/LD50-Prediction/wandb/run-20250204_140504-gyf40810/files/output.log
+2025-02-04 14:17:38,742 ERROR   gpuapple  :69254 [gpu_apple.py:sample():110] GPU stats error: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+Traceback (most recent call last):
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/wandb/bin/apple_gpu_stats'
+2025-02-04 14:17:39,037 DEBUG   HandlerThread:69254 [handler.py:handle_request():158] handle_request: status_report
+2025-02-04 14:17:39,259 INFO    cpu       :69254 [interfaces.py:monitor():138] Process cpu has exited.
+2025-02-04 14:17:39,259 DEBUG   SystemMonitor:69254 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2025-02-04 14:17:39,259 DEBUG   SystemMonitor:69254 [system_monitor.py:_start():183] Publishing last batch of metrics
+2025-02-04 14:17:39,261 DEBUG   SenderThread:69254 [sender.py:send():391] send: stats
+2025-02-04 14:17:40,276 INFO    MainThread:69254 [internal.py:handle_exit():75] Internal process exited

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/run.py", line 114, in <module>
+    t.train()
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/run.py", line 78, in train
+    out.float()
+UnboundLocalError: local variable 'out' referenced before assignment

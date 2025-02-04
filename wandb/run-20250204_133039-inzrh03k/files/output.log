@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/run.py", line 91, in <module>
+    t = trainer(config)
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/run.py", line 38, in __init__
+    self.dataset = Data(x, y)
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/dataload.py", line 33, in __init__
+    self.y = [torch.log(z) for z in y]
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/dataload.py", line 33, in <listcomp>
+    self.y = [torch.log(z) for z in y]
+TypeError: log(): argument 'input' (position 1) must be Tensor, not float

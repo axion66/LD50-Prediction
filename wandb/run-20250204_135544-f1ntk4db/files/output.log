@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/run.py", line 93, in <module>
+    t = trainer(config)
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/run.py", line 33, in __init__
+    self.model = GCN(in_chn=config['in_chn'], out_chn=config['out_chn'], in_edge=config['in_edge']).float()
+TypeError: __init__() got an unexpected keyword argument 'in_chn'

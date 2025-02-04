@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/run.py", line 113, in <module>
+    t.train()
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/run.py", line 78, in train
+    x.x = x.x.float()
+AttributeError: 'list' object has no attribute 'x'

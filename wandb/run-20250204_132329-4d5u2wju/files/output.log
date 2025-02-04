@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/run.py", line 92, in <module>
+    t.train()
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/run.py", line 61, in train
+    out = self.model(batch)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/model.py", line 33, in forward
+    edge_attr = ed
+NameError: name 'ed' is not defined

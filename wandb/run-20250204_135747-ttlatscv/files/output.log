@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/run.py", line 94, in <module>
+    t.train()
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/run.py", line 64, in train
+    loss = self.loss(out.squeeze(-1), y)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/loss.py", line 731, in forward
+    return F.binary_cross_entropy_with_logits(input, target,
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch/nn/functional.py", line 3224, in binary_cross_entropy_with_logits
+    raise ValueError(f"Target size ({target.size()}) must be the same as input size ({input.size()})")
+ValueError: Target size (torch.Size([32])) must be the same as input size (torch.Size([652]))

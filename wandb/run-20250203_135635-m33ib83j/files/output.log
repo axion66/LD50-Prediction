@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/run.py", line 114, in <module>
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/run.py", line 78, in train
+    x.x.float()
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch_geometric/data/data.py", line 561, in __getattr__
+    return getattr(self._store, key)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch_geometric/data/storage.py", line 96, in __getattr__
+    raise AttributeError(
+AttributeError: 'GlobalStorage' object has no attribute 'float'

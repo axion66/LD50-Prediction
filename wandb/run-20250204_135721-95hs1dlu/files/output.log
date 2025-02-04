@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/run.py", line 94, in <module>
+    t.train()
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/run.py", line 62, in train
+    out = self.model(batch)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/model.py", line 64, in forward
+    x = self.conv1(x, edge_index).relu()
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch_geometric/nn/conv/gcn_conv.py", line 241, in forward
+    edge_index, edge_weight = gcn_norm(  # yapf: disable
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch_geometric/nn/conv/gcn_conv.py", line 108, in gcn_norm
+    deg = scatter(edge_weight, idx, dim=0, dim_size=num_nodes, reduce='sum')
+  File "/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch_geometric/utils/_scatter.py", line 75, in scatter
+    return src.new_zeros(size).scatter_add_(dim, index, src)
+RuntimeError: scatter(): Expected dtype int64 for index

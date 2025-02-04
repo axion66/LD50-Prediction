@@ -1,0 +1,19 @@
+1: torch.Size([731, 9])
+2: torch.Size([731, 36])
+3: torch.Size([731, 36])
+4: torch.Size([731, 128])
+5: torch.Size([32, 128])
+6: torch.Size([32, 1])
+torch.Size([32, 1])
+torch.Size([32])
+tensor(14865925., grad_fn=<MseLossBackward0>)
+tensor([-0.5940], grad_fn=<SelectBackward0>)
+tensor(1200.)
+/Users/jinseopsong/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/loss.py:535: UserWarning: Using a target size (torch.Size([32])) that is different to the input size (torch.Size([32, 1])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.mse_loss(input, target, reduction=self.reduction)
+Traceback (most recent call last):
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/run.py", line 112, in <module>
+    t.train()
+  File "/Users/jinseopsong/coding/LD50-Prediction/src/run.py", line 87, in train
+    raise Exception("DAD")
+Exception: DAD
