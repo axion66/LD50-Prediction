@@ -8,8 +8,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 
-from sklearn.metrics import roc_auc_score
-
+from sklearn.metrics import roc_auc_score, confusion_matrix
 import preprocess as pp
 
 
@@ -100,6 +99,7 @@ class MolecularGraphNeuralNetwork(nn.Module):
             predicted_scores = predicted_scores.to('cpu').data.numpy()
             predicted_scores = [s[1] for s in predicted_scores]
             correct_labels = correct_labels.to('cpu').data.numpy()
+            print(f"Correct/Predict: {correct_labels}/{predicted_scores}")
             return predicted_scores, correct_labels
 
     def forward_regressor(self, data_batch, train):
@@ -161,8 +161,12 @@ class Tester(object):
                                                data_batch, train=False)
             P.append(predicted_scores)
             C.append(correct_labels)
+            #predictions = (P >= 0.5).astype(int)
+
+            
         AUC = roc_auc_score(np.concatenate(C), np.concatenate(P))
-        return AUC
+        CM = confusion_matrix(np.concatenate(C), (np.concatenate(P) >= 0.5).astype(int))
+        return AUC, CM
 
     def test_regressor(self, dataset):
         N = len(dataset)
@@ -247,8 +251,8 @@ if __name__ == "__main__":
         loss_train = trainer.train(dataset_train)
 
         if task == 'classification':
-            prediction_dev = tester.test_classifier(dataset_dev)
-            prediction_test = tester.test_classifier(dataset_test)
+            prediction_dev, cm_dev = tester.test_classifier(dataset_dev)
+            prediction_test, cm_test = tester.test_classifier(dataset_test)
         if task == 'regression':
             prediction_dev = tester.test_regressor(dataset_dev)
             prediction_test = tester.test_regressor(dataset_test)
@@ -265,7 +269,7 @@ if __name__ == "__main__":
             print(result)
 
         result = '\t'.join(map(str, [epoch, time, loss_train,
-                                     prediction_dev, prediction_test]))
+                                     prediction_dev, cm_dev, prediction_test, cm_test]))
         tester.save_result(result, file_result)
 
         print(result)

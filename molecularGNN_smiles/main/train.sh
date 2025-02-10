@@ -1,5 +1,5 @@
-task=regression     
-dataset=photovoltaic
+task=classification     
+dataset=hiv
 
 radius=1
 dim=64

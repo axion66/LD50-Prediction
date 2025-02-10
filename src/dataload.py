@@ -21,7 +21,7 @@ def into_dataset2(file = None, with_hydrogen=False, kekulize=False, output_file=
         # Loop through each element in the JSON data
         for part in j:
             smiles = part[1]
-            number = math.log10(part[2])
+            number = 1 if part[2] > 2000 else 0
             
             # Write the SMILES and the number to the output file with space in between
             f_out.write(f"{smiles} {number}\n")
